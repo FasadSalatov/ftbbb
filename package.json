@@ -16,8 +16,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack serve -c ./webpack.config.preview.mjs --open",
-  "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack && tsc --emitDeclarationOnly",
+    "start": "webpack serve -c ./webpack.config.preview.mjs --open",
+    "build": "webpack && tsc --emitDeclarationOnly",
     "lint": "eslint",
     "test": "jest --passWithNoTests",
     "check-prettier": "prettier --check ./src",
@@ -39,7 +39,6 @@
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1",
-    "webpack-node-externals": "^3.0.0",
-    "cross-env": "^7.0.3"
+    "webpack-node-externals": "^3.0.0"
   }
 }
