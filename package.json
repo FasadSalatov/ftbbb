@@ -16,8 +16,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve -c ./webpack.config.preview.mjs --open",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack && tsc --emitDeclarationOnly",  
+     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack serve -c ./webpack.config.preview.mjs --open",
+  "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack && tsc --emitDeclarationOnly",
     "lint": "eslint",
     "test": "jest --passWithNoTests",
     "check-prettier": "prettier --check ./src",
